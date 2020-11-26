@@ -1,0 +1,7 @@
+{% if order_list %}
+    <ul>
+    {% for item in order_list %}
+        <a href="/{{ item.id }}">{{ item.name }}</a>
+    {% endfor %}
+    </ul>
+{% endif %}

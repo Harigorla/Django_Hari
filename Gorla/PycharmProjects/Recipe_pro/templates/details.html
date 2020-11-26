@@ -1,0 +1,8 @@
+<h1>{{ order_list.name }}</h1>
+
+<form action="{% url 'details' order_list.id %}" method="post">
+{% csrf_token %}
+{% for choice in order_list %}
+    <a href="/{{ order_list.id }}">{{ order_list.name }}</a>
+{% endfor %}
+</form>

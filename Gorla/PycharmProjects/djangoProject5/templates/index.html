@@ -1,0 +1,9 @@
+{% load static %}
+{% if display %}
+
+    {% for dis in display %}
+        <a href="/{{ dis.id }}">{{ dis.name }} {{ dis.delete }}</a>
+        <img src="{{ dis.img.url }}" height="100" width="100" alt="img"></img>
+    {% endfor %}
+
+{% endif %}
